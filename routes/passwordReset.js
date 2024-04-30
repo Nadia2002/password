@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
             }).save();
         }
 
-        const link = `${process.env.BASE_URL}/password-reset/${user._id}/${token.token}`;
+        const link = `${process.env.BASE_URL}/api/password-reset/${user._id}/${token.token}`;
         await sendEmail(user.email, "Password reset", link);
 
         res.send("password reset link sent to your email account");
@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.post("/:userId/:token", async (req, res) => {
+router.post("/api/:userId/:token", async (req, res) => {
     try {
         const schema = Joi.object({ password: Joi.string().required() });
         const { error } = schema.validate(req.body);
