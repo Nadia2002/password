@@ -1,0 +1,21 @@
+{
+  "name": "node-email-password-reset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "mongoose": "^5.13.22",
+    "nodemailer": "^6.9.13",
+    "validator": "^13.11.0"
+  }
+}
